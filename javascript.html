@@ -460,7 +460,178 @@
         console.log([] - []); 
     </script>
 
+<script>
+        let X = 5; // global scope
+        {
+            let Y = 5 + X;
+            console.log(Y);
+        }
+    </script>
+    <script>
+        const L = 5; // global scope
+        {
+            const M = 5 + X;
+            console.log(M);
+        }
+
+    </script>
+
+    <script>
+        var O = 5; // global scope
+        {
+            var P = 5 + X;
+            console.log(P);
+        }
+
+    </script>
+
+    <script>
+        {
+            let Zz = 5; // block scope
+        }
+        console.log(Zz);
+
+    </script>
+
+    <script>
+        {
+            const Z = 5; // block scope
+        }
+        console.log(Z);
+
+    </script>
+
+    <script>
+        {
+            var yy = 5; // no block scope for var
+        }
+        console.log(yy);
+
+    </script>
+
+    <script>
+        function greet() {
+            let NAME = "Sneha"; // function scope
+        }
+        console.log("Hello" + NAME);
+    </script>
+
+    <script>
+        g = 10;
+        var g;
+        console.log(g);
+    </script>
+
+    <script>
+        h = 15;
+        {
+            var h;
+            console.log(h);
+        }
+    </script>
+
+    <script>
+        console.log(i); // variable name hoistng
+        {
+            var i = 15;
+
+        }
+    </script>
+
+    <script>
+
+        function fun() {
+            var f = 10;
+        }
+        console.log(f);
+    </script>
+
+    <script>
+        function Fun() {
+            let q = 10;
+        }
+        console.log(q);
+    </script>
+
+    <script>
+        function FUN() {
+            const r = 10;
+            console.log(r);
+        }
+        console.log(r);
+    </script>
+
+    <script>
+        scooty();
+        function scooty() {
+            console.log("Hello, this is my scooty !"); //function hoisting
+        }
+
+    </script>
+    <script>
+        function car() {
+            console.log("Hello, this is my car !");
+        }
+
+    </script>
+
+    <script>
+        var car = function () {
+            console.log("Hello, this is my new car !"); //rewriting first function
+        }
+        car();
+    </script>
+
+    <script>
+        function bike() {
+            console.log("Hello, this is my bike !");
+        }
+    </script>
+
+    <script>
+        function bike() {
+            console.log("Hello, this is my new bike !"); // second function takes first prefernece
+        }
+        bike();
+    </script>
+
+    <script>
+        function foo() {
+            var b = 1;
+            function inner() {
+                return b;
+            }
+            return inner;
+
+        }
+        var get_func_inner = foo();
+
+        console.log(get_func_inner());
+    </script>
+
+    <script>
+        class Car {
+            constructor(name, year) {
+                this.name = name;
+                this.year = year;
+            }
+        }
+        let car1 = new Car("Audi", 2005);
+        console.log(car1.name + " " + car1.year);
+    </script>
+
+    <script>
+        const t = {
+            name: "Noshini",
+            age: 20
+        }
+        t.name = "Nosh";
+        console.log(t);
+    </script>
+
 
 </body>
 
+
 </html>
+
