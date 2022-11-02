@@ -628,10 +628,162 @@
         t.name = "Nosh";
         console.log(t);
     </script>
+    
+    <script>
+    function names(name1, name2, name3) {
+        console.log(name1, name2, name3);
+    }
+    names("Noshini", "Sneha", "Joo");
+</script>
 
+<script>
+    function names(name1, name2, name3) {
+        console.log(name1, name2, name3);
+    }
+    names("Noshini", "Sneha", "Joo", "Jai");
+</script>
+
+<script>
+    function names(...name) { //rest
+        console.log(name);
+    }
+    names("Noshini", "Sneha", "Joo", "Jai", "Jay")
+</script>
+
+<script>
+    function names(name1, name2, ...name) {
+        console.log(name1, name2, name);
+    }
+    names("Noshini", "Joo", "Jai", "Jay");
+</script>
+
+<script>
+    function names(name1, name2, ...name, name10) { //erreor
+        console.log(name1, name2, name);
+    }
+    s("Noshini", "Sneha", "Joo", "Jai", "Jay");
+</script>
+
+<script>
+    let Greet = () => console.log("Hello"); // arrow function
+    Greet();
+</script>
+
+
+<script> Greeting = () => "Hello";
+    console.log(Greeting());
+</script>
+
+<script>
+    GreetinG = () => "Hello";
+    console.log(GreetinG());
+</script>
+
+<script>
+    GreetinGs = name => "Hello " + " " + name;
+    console.log(GreetinGs("Noshini"));
+</script>
+
+<script>
+    mul = a, b => a * b;
+    console.log(mul(5, 5));
+</script>
+
+<script>
+    mul = (a, b) => a * b; // brackets must while passing more than 1 arguments
+    console.log(mul(2, 5));
+</script>
+
+<script>
+    mul1 = (...num) => console.log(num);
+    mul1(2, 3, 4, 5);
+
+</script>
+
+<script>
+    mul = (...num) => console.log(num.map(Math.sqrt));
+    mul(25, 16, 9);
+
+</script>
+
+<script>
+    mul = (...num) => console.log(...num.map(Math.sqrt));
+    mul(25, 16, 9);
+
+</script>
+    
+    <script>
+    add = (...num) => console.log(num.map(Math.sqrt));
+    add(25, 4, 9, 16);
+</script>
+
+<script>
+    let print = item => console.log(item);
+    let f = (...items) => items.map(print);
+    f(1, 2, 3, 4, 5);
+</script>
+
+<script>
+    let arr1 = [1, 2, 3, 4, 5];
+    let arr2 = arr1;
+    console.log(arr2);
+    arr2[1] = 1;
+    console.log(arr1);
+    console.log(arr2);
+</script>
+
+<script>
+    let arr3 = [1, 2, 3, 4, 5];
+    let arr4 = [...arr3] //copy
+    console.log(arr4);
+    arr3[1] = 1;
+    console.log(arr3);
+    console.log(arr4);
+</script>
+
+<script>
+    let arr5 = [1, 2, 3, 4, 5];
+    let arr6 = [6, 7, 8, 9, 0];
+    let arr7 = [...arr5, ...arr6]; //concat
+    console.log(arr7);
+
+</script>
+
+<script>
+    let arr8 = [1, 2, 3, 4, 5];
+    let arr9 = [...arr8, 6, 7];
+    console.log(arr9);
+
+</script>
+
+<script>
+    let arr10 = [25, 1];
+    console.log(Math.min(...arr10));
+
+</script>
+
+<script>
+    let user1 = {
+        name1: "Sneha",
+        id1: 1,
+    };
+    let user2 = {
+        name2: "Noni",
+        id2: 2,
+    };
+    let USERS = { ...user1, ...user2 };
+    console.log(USERS);
+</script>
+
+<script>
+    let names = ["Nosh", "abi"];
+    let names1 = [...names, "jeni"];
+    console.log(names1);
+</script>
 
 </body>
 
 
 </html>
+
 
