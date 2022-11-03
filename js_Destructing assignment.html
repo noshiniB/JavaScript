@@ -1,0 +1,118 @@
+<script>
+    let a = { p: 1, Q: 2, r: () => { } };
+    let b = { s: 1, t: 2, u: () => { } };
+    let ab = { a, b };
+    console.log(ab);
+
+    let c = { p: 1, Q: 2, r: () => { } };
+    let d = { s: 1, t: 2, u: () => { } };
+    let cd = { ...c, ...d };
+    console.log(cd);
+
+    let array1 = [1, 2, 3];
+    console.log(array1);
+
+    let [e, f, g] = [1, 2, 3]; //destructing assignment
+    console.log(e, f, g);
+    console.log(window.e);
+
+    [h, i, j] = [1, 2, 3]; //assigned to var by default
+    console.log(h, i, j);
+    console.log(window.h);
+
+    [k, ...l] = [1, 2, 3, 4, 5]; //rest
+    console.log(k);
+    console.log(...l); //spread
+
+    let object1 = {
+        Name: "Noshini",
+        Age: 20,
+    };
+    console.log(object1);
+
+    let { Name, Age } = { //destructing assignment in object
+        Name: "Noshini",
+        Age: 20,
+    };
+    console.log(Name);
+    console.log(Age);
+
+    let object2 = {
+        Names: "Noshini",
+        Age: 20,
+    };
+    let Names = object2;
+    console.log(Names);
+
+    let object3 = {
+        Name1: "Noshini",
+        Age: 20,
+    };
+    let { Name1 } = object3; //destructing assignment
+    console.log(Name1);
+
+    let { m, n } = { m: 1, n: { o: 2 } };
+    console.log(m, n);
+
+    let { p, q } = { p: 1, r: { q: 2 } }; //second level object is not scanned
+    console.log(p, q);
+
+    let first = {
+        second: {
+            third: {
+                a1: 1,
+                b1: 2,
+                c1: 3,
+            }
+        }
+    }
+    let { a1, b1, c1 } = first.second.third;
+    console.log(a1);
+    console.log(b1);
+    console.log(c1);
+
+    let { vechile } = { vechile: "car" };
+    console.log(vechile);
+
+    let { vechile2: Four_Wheeler1 } = { vechile2: "car" }; //renaming variable name
+    console.log(Four_Wheeler1);
+
+</script>
+
+<script>
+    let { vechile1: Four_Wheeler } = { vechile1: "car" };
+    console.log(vechile1);
+
+</script>
+
+<script>
+    let obj1 = { X: 1, Y: 2, Z: 3 };
+    let obj2 = { x: 1, y: 2, z: 3 };
+    let obj12 = { obj1, obj2 };
+    console.log(obj12);
+
+    let obj3 = { X1: 1, Y1: 2, Z1: 3 };
+    let obj4 = { x1: 1, y1: 2, z1: 3 };
+    let obj34 = { ...obj3, ...obj4 };
+    console.log(obj34);
+
+    let obj5 = {
+        X2: { X3: { X4: 1 } } //spread in nested object
+    };
+    let obj6 = { x2: 1, y2: 2, z2: 3 };
+    let obj56 = { ...obj5, ...obj6 };
+    console.log(obj56);
+
+    let U = [1, 2];
+    let V = [3, 4];
+    let W = [...U, ...V];
+    console.log(W);
+
+    let [ft, , td] = [1, 2, 3]; //skip
+    console.log(ft, td);
+
+    let [four, five] = [1, 2];
+    console.log(four, five);
+    [four, five] = [five, four]; //swapping
+    console.log(four, five);
+</script>

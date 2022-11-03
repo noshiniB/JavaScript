@@ -1,0 +1,151 @@
+<script>
+    function global() {
+        console.log("I'm global function")
+        function inner() {
+            console.log("I'm inner function");
+        }
+        inner();
+    }
+    global();
+</script>
+
+<script>
+    function greet(timing, name) {
+        format = `Hello ${timing} ${name}! `;
+        let greet1 = function () {
+            console.log(format);
+        }
+        greet1();
+    }
+    greet("Good Morning", "Noshini");
+</script>
+
+<script>
+    function greet(timing, name) {
+        format = `Hello ${timing} ${name}! `;
+        let greet1 = function () {
+            console.log(format);
+        }
+        return greet1;
+    }
+    let greet2 = greet("Good Morning", "Noshini");
+    greet2();
+</script>
+
+<script>
+    let print, set, increase, decrease;
+
+    function manager() {
+        console.log("manager();");
+        let number = 10;
+        print = function () { console.log(number) }
+        set = function (value) { number = value }
+        increase = function () { number++ }
+        decrease = function () { number-- }
+    }
+    manager();
+    print();
+    set(50);
+    print();
+    increase();
+    print();
+    decrease();
+    print();
+
+</script>
+
+<script>
+    function count() {
+        let c = 0;
+        function inner() {
+            c += 1;
+            console.log(c);
+        }
+        inner();
+    }
+    count();
+    count();
+
+</script>
+
+<script>
+    function fun() {
+        let a = 10;
+        function inner() {
+            return a;
+        }
+        return inner;
+    }
+    let output = fun();
+    console.log(output());
+</script>
+
+<script>
+    function fun() {
+        let a = 10;
+        function inner() {
+            console.log(a);
+        }
+        inner();
+    }
+    fun();
+</script>
+
+<script>
+    function fun(a) {
+        function inner(b) {
+            let mul = a * b;
+            return mul;
+        }
+        return inner;
+    }
+    let ans = fun(5);
+    console.log(ans(10));
+
+</script>
+
+<script>
+    function fun(a, b, c, d, e) {
+        let arity = fun.length;
+        console.log(arity);
+    }
+    fun();
+</script>
+
+<script>
+    function mul(a, b, c) { //normal function
+        return a * b * c;
+    }
+    console.log(mul(2, 5, 6));
+</script>
+
+<script>
+    function mul(a) { // currying
+        return function (b) {
+            return function (c) {
+                return a * b * c;
+            }
+        }
+    }
+    console.log(mul(5)(5)(5));
+</script>
+
+<script>
+    function add(val1) {
+        return function (val2) {
+            return val1 + val2;
+        }
+    }
+
+    console.log(add(10)(20));
+</script>
+
+<script>
+    function add(val1) {
+        return function (val2) {
+            console.log(val1 + val2);
+        }
+    }
+
+    add(10)(20);
+</script>
