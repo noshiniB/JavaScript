@@ -781,6 +781,128 @@
     console.log(names1);
 </script>
 
+    <script>
+        console.log(5 + 5);
+        console.log(9 - 5);
+        console.log(5 * 5);
+        console.log(5 ** 5)
+        console.log(10 / 5);
+        console.log(10 % 5)
+        let yz = 5;
+        console.log(yz);
+        console.log(yz++);
+        console.log(yz++);
+        console.log(yz++);
+        console.log(yz--);
+        console.log(yz--);
+        console.log(yz--);
+    </script>
+
+    <script>
+        console.log(p = 1);
+        console.log(p += 1);
+        console.log(p -= 1);
+        console.log(p *= 1);
+        console.log(p **= 1);
+        console.log(p /= 1);
+        console.log(p %= 1);
+    </script>
+
+    <script>
+        let S1 = 10;
+        let S2 = 5;
+        console.log(S1 == S2);
+        console.log(S1 === S2);
+        console.log(S1 != S2);
+        console.log(S1 !== S2);
+        console.log(S1 > S2);
+        console.log(S1 >= S2);
+        console.log(S1 < S2);
+        console.log(S1 <= S2);
+    </script>
+
+    <script>
+        let S3 = 10;
+        let S4 = 5;
+        let S5 = 5;
+        console.log(S3 > S4 && S4 == S5);
+        console.log(S3 > S4 && S4 > S5);
+        console.log(S3 > S4 || S4 > S5);
+        console.log(S3 < S4 || S4 > S5);
+        console.log(!S3 > S4);
+        console.log(!S3 < S4);
+    </script>
+
+    <script>
+        let S6 = 10;
+        let S7 = 4;
+        console.log(S6 & S7);
+        console.log(S6 | S7);
+        console.log(S6 ^ S7);
+        console.log(~S7);
+        console.log(S6 << 1);
+        console.log(S7 >> 1);
+    </script>
+
+    <script>
+        let S8 = 10;
+        let S9 = 4;
+        let value1 = S8 > S9 ? "S8 is greater" : "S9 is greater";
+        console.log(value1);
+        let value2 = S8 < S9 ? "S8 is greater" : "S9 is greater";
+        console.log(value2);
+    </script>
+
+    <script>
+        console.log(typeof 1);
+        console.log(typeof Number(1));
+        console.log(typeof new Number(1));
+        console.log(typeof new Number(1).valueOf());
+    </script>
+
+    <script>
+        let picnic = {
+            place: "ooty",
+            days: 3,
+        };
+        console.log(picnic);
+        delete picnic.days;
+        console.log(picnic);
+        picnic.place = "cbe";
+        console.log(picnic);
+    </script>
+
+    <script>
+        let Picnic = {
+            place: "ooty",
+            days: 3,
+        };
+        console.log("days" in Picnic);
+    </script>
+
+    <script>
+        let PicniC = {
+            place: "ooty",
+            days: 3,
+        };
+        console.log("ooty" in PicniC);
+    </script>
+
+    <script>
+        let array1 = [1, 2, 3, 4, 5];
+        console.log(0 in array1);
+        console.log(5 in array1);
+    </script>
+
+    <script>
+        let array2 = [1, 2, 3, 4, 5];
+        console.log("length" in array2);
+    </script>
+
+    <script>
+        console.log("length" in {});
+        console.log("length" in { "length": 5 });
+    </script>
 </body>
 
 
