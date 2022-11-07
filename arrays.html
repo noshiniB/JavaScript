@@ -1,0 +1,149 @@
+<script>
+    let fruits = ["Banana", "Orange", "Apple", "Mango"];
+    console.log(fruits.sort());
+</script>
+
+<script>
+    let num = [9, 1, 2, 8, 0, 5];
+    console.log(num.sort());
+</script>
+
+<script>
+    let my_sort = (a, b) => a.year - b.year;
+
+    let cars = [
+        { type: "Volvo", year: 2016 },
+        { type: "Saab", year: 2001 },
+        { type: "BMW", year: 2010 }
+    ];
+
+    let sorted = cars.sort(my_sort);
+    console.log(sorted);
+</script>
+
+<script>
+    let my_sort1 = (a, b) => a.year - b.year;
+
+    let cars1 = [
+        { type: "Volvo", year: 2016 },
+        { type: "Saab", year: 2001 },
+        { type: "BMW", year: 2010 }
+    ];
+
+    console.log(cars1.sort(my_sort1));
+</script>
+
+<script>
+    let cars3 = [
+        { type: "Volvo", year: 2016 },
+        { type: "Saab", year: 2001 },
+        { type: "BMW", year: 2010 }
+    ];
+
+    console.log(cars3.sort(function (a, b) { return a.year - b.year }));
+</script>
+
+<script>
+    let fruits1 = ["Banana", "Orange", "Apple", "Mango"];
+    fruits1.forEach(function (item, index, object) { console.log(item, index, object) });
+</script>
+
+<script>
+    let fruits2 = ["Banana", "Orange", "Apple", "Mango"];
+    fruits2.forEach((item, index) => { console.log(item, index) });
+</script>
+
+<script>
+    let fruits3 = ["'Banana'", "'Orange'", "'Apple'", "'Mango'"];
+    fruits3.forEach(item => console.log(item));
+</script>
+
+<script>
+    let cars4 = [
+        { type: "Volvo", year: 2016 },
+        { type: "Saab", year: 2001 },
+        { type: "BMW", year: 2010 }
+    ];
+    cars4.forEach(function (item, index, object) { console.log(item, index, object) });
+</script>
+
+<script>
+    let cars5 = [
+        { type: "Volvo", year: 2016 },
+        { type: "Saab", year: 2001 },
+        { type: "BMW", year: 2010 }
+    ];
+    cars5.forEach((item, index, object) => { console.log(item, index, object) });
+</script>
+
+<script>
+    let cars6 = [
+        { type: "Volvo", year: 2016 },
+        { type: "Saab", year: 2001 },
+        { type: "BMW", year: 2010 }
+    ];
+    cars6.forEach(item => console.log(item));
+</script>
+
+<script>
+    let num1 = [9, 1, 2, 8, 5];
+    console.log(num1.every((function (num1) { return num1 > 0 })));
+</script>
+
+<script>
+    let num2 = [9, 1, 2, 8, 5];
+    console.log(num2.every(((num2) => { return num2 < 9 })));
+</script>
+
+<script>
+    let num3 = [9, 1, 2, 8, 5];
+    num3.every(((num3) => { console.log(num3 < 9) }));
+</script>
+
+<script>
+    let cars7 = [
+        { type: "Volvo", year: 2016 },
+        { type: "Saab", year: 2001 },
+        { type: "BMW", year: 2010 }
+    ];
+    cars7.every(((index) => { console.log(index == 0) }));
+</script>
+
+<script>
+    let num4 = [9, 1, 2, 8, 5];
+    console.log(num4.some((function (num4) { return num4 > 5 })));
+</script>
+
+<script>
+    let num5 = [9, 1, 2, 8, 5];
+    console.log(num5.some((function (num5) { return num5 == 3 })));
+</script>
+
+<script>
+    let num6 = [9, 1, 2, 8, 5];
+    console.log(num6.filter((function (num6) { return num6 < 5 })));
+</script>
+
+<script>
+    let num8 = [9, 25, 36];
+    console.log(num8.map(Math.sqrt));
+</script>
+
+<script>
+    let num9 = [9, 25, 36];
+    console.log(num9.map(n => { return n * 10 }));
+</script>
+
+<script>
+    let num7 = [9, 1, 2, 8, 5];
+    console.log(num7.map(value => value = value + 1));
+</script>
+
+<script>
+    const persons = [
+        { firstname: "Malcom", lastname: "Reynolds" },
+        { firstname: "Kaylee", lastname: "Frye" },
+        { firstname: "Jayne", lastname: "Cobb" }
+    ];
+    console.log(persons.map(item => { return [item.firstname, item.lastname].join(" ") }));
+</script>
