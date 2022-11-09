@@ -1,0 +1,279 @@
+<script>
+    const numbers = [175, 50, 25];
+    console.log(numbers.reduce((total, num) => { return total - num; }));
+</script>
+
+<script>
+    const numberss = [10, 50, 5];
+    console.log(numberss.reduce((total, num) => { return total - num; }));
+</script>
+
+<script>
+    const numbers1 = [175, 50, 25];
+    console.log(numbers1.reduce((total, num) => { return total + num; }, 0));
+</script>
+
+<script>
+    const numbers2 = [15.5, 2.3, 1.1, 4.7];
+    console.log(numbers2.reduce((total, num) => { return total + Math.round(num); }, 0));
+</script>
+
+<script>
+    const numbers3 = [5, 2, 2];
+    console.log(numbers3.reduce((num1, num2) => { return num1 * num2; }));
+</script>
+
+<script>
+    let arr2 = [90, 18, [89, 56], [13, 20, [67, 17]]];
+    console.log(arr2.flat());
+</script>
+
+<script>
+    let arr = [90, 18, [89, 56], [13, 20, ...[67, 17]]];
+    console.log(arr.flat());
+</script>
+
+<script>
+    let arr1 = [90, 18, [89, 56], [13, 20, [67, 17]]];
+    console.log(arr1.flat(Infinity));
+</script>
+
+<script>
+    let num = [9, 1, 2, 8, 5];
+    console.log(num.flatMap(value1 => [value1, value1 * 2]));
+
+</script>
+
+<script>
+    let str = "The rain in SPAIN stays mainly in the plain";
+    console.log(str.match("ain"));
+</script>
+
+<script>
+    let str1 = "The rain in SPAIN stays mainly in the plain";
+    console.log(str1.match(/ain/));
+</script>
+
+<script>
+    let str2 = "The rain in SPAIN stays mainly in the plain";
+    let result = str2.match(/ain/g);
+    console.log(result);
+</script>
+
+<script>
+    let str3 = "The rain in SPAIN stays mainly in the plain";
+    let result1 = str3.match(/ain/gi);
+    console.log(result1);
+</script>
+
+<script>
+    console.log('Goglgo now!'.match(/(go)+/ig));
+</script>
+
+<script>
+    console.log('Goglgo now!'.match(/go/ig));
+</script>
+
+<script>
+    console.log('Gogogo now!'.match(/(go)+/ig));
+</script>
+
+<script>
+    console.log('Gogogo now!'.match(/go/ig));
+</script>
+
+<script>
+    let path = 'posts/10';
+    console.log(path.match(/sts/gi));
+</script>
+
+<script>
+    let path1 = 'posts/10';
+    console.log(path1.match(/\w/));
+    console.log(path1.match(/\w+/));
+    console.log(path1.match(/\d/));
+    console.log(path1.match(/\d+/));
+    console.log(path1.match(/\d/g));
+    console.log(path1.match(/\w+\/\d+/));
+    console.log(path1.match(/\w+\/(\d+)/));
+    console.log(path1.match(/(\w+)\/\d+/));
+    console.log(path1.match(/(\w+)\/(\d+)/));
+    console.log(path1.match(/(\w+)\/(\d+)/g)); //grouping doesnt work in match if we use g flag
+    console.log(path1.match(/(?<resource>\w+)\/(?<id>\d+)/));
+
+</script>
+
+<script>
+    const path2 = 'posts/10';
+    const pattern = /(\w+)\/(\d+)/;
+
+    const match = path2.match(pattern);
+    console.log(match[0], match[1], match[2]);
+</script>
+
+<script>
+    const path3 = 'posts/10';
+    const pattern1 = /(?<resource>\w+)\/(?<id>\d+)/;
+
+    const match1 = path3.match(pattern1);
+    for (const name in match1.groups) {
+        console.log(name, match1.groups[name]);
+    }
+</script>
+
+<script>
+    const string = 'posts/2022/02/18';
+    console.log(string.match(/\w+\/\d+\/\d+\/\d+/));
+    console.log(string.match(/\w+\/\d{4}\/\d{2}\/\d{2}/));
+    console.log(string.match(/(\w+)\/(\d{4})\/(\d{2})\/(\d{2})/));
+    console.log(string.match(/(?<posts>\w+)\/(?<year>\d{4})\/(?<month>\d{2})\/(?<day>\d{2})/));
+
+
+</script>
+
+<script>
+    const sentence = "JavaScript1JavaScript2";
+    let regex = sentence.matchAll(/javascript\d/);
+    for (let letters of regex) {
+        console.log(letters);
+    }
+</script>
+
+<script>
+    const sentence1 = "JavaScript1JavaScript2";
+    let regex1 = sentence1.matchAll(/javascript\d/gi);
+    for (let letters1 of regex1) {
+        console.log(letters1);
+    }
+</script>
+
+<script>
+    const sentence2 = "JavaScript1JavaScript2";
+    let regex2 = sentence2.matchAll(/javascript(\d)/gi);
+    for (let letters2 of regex2) {
+        console.log(letters2);
+    }
+</script>
+
+<script>
+    const sentence3 = "JavaScript1JavaScript2";
+    let regex3 = sentence3.matchAll(/(javascript)(\d)/gi);
+    for (let letters3 of regex3) {
+        console.log(letters3);
+    }
+</script>
+
+<script>
+    const sentence4 = "I am learning JavaScript not Java.";
+    console.log(...Array.from(sentence4.matchAll(/Java[a-z]*/gi)));
+</script>
+
+<script>
+    let iterator = "Hello";
+    let print = iterator.matchAll(/el/gi);
+    console.log(...Array.from(print));
+
+</script>
+
+<script>
+    const sentence11 = "JavaScript1JavaScript2";
+    let regex11 = sentence11.matchAll(/javascript\d/gi)
+    console.log(...Array.from(regex11));
+</script>
+
+<script>
+    let iterator1 = "Hello";
+    let print1 = iterator1.matchAll(/[el]/gi);
+    for (let match of print1) {
+        console.log(match);
+    }
+</script>
+
+<script>
+    let iterator0 = "Hello";
+    let print0 = iterator0.matchAll(/[el]/gi);
+    console.log(...Array.from(print0));
+
+</script>
+
+<script>
+    function is_array(value) {
+        return typeof value.reduce == "function" &&
+            typeof value.filter == "function" &&
+            typeof value.map == "function" &&
+            typeof value.length == "number"
+    }
+</script>
+
+<script>
+    function isEqual(obj1, obj2) {
+        let props1 = Object.getOwnPropertyNames(obj1);
+        let props2 = Object.getOwnPropertyNames(obj2);
+
+        if (props1.length != props2.length) {
+            return false;
+        }
+        for (let i = 0; i < props1.length; i++) {
+            let prop = props1[i];
+
+
+
+            if (obj1[prop] !== obj2[prop]) {
+                return false;
+            }
+
+
+        }
+
+        return true;
+    }
+    let person1 = {
+        age: 28,
+        name: 'Amy'
+    };
+    let person2 = {
+        name: 'Amy',
+        age: 28
+    };
+    console.log(isEqual(person1, person2));
+</script>
+
+<script>
+    let a0 = { prop: [1, 2] }
+    let b0 = { prop: [1, 2] }
+    console.log(isEqual(a0, b0));
+</script>
+
+
+
+
+<script>
+    let a = [2, 3];
+    let b = [2, 3];
+    let c = [5, 5];
+    function equalsCheck(a, b) {
+        if (!(is_array(a) && is_array(b)))
+            return false;
+
+        if (a.length != b.length)
+            return false;
+
+        for (let i = 0; i < a.length; i++)
+            if (a[i] !== b[i])
+                return false;
+
+
+        return true;
+    }
+    console.log(equalsCheck(a, b));
+    console.log(equalsCheck(b, b));
+    console.log(equalsCheck(b, c));
+    console.log(equalsCheck(a, c));
+
+
+</script>
+
+<script>
+
+
+</script>
